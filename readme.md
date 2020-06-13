@@ -130,5 +130,5 @@ the version of **0.2.1** in the virtual environment.
 1. Once you find the image you want to use, copy the **ImageId** to a safe location.
 The **ImageId** can be used in Terraform to launch an AWS instance. The **ImageId** is
 the same as the **ami**.Take a look at the
-[terraform-for-beginners](../terraform-for-beginners) repo to start working
+[terraform-for-beginners](https://github.com/bretmullinix/terraform-for-beginners) repo to start working
 with Terraform and use the **ImageId** you found.
