@@ -12,6 +12,10 @@ None
 
 ### Installation
 
+None
+
+### Instructions
+
 #### Working with the AWS Command Line Interface (CLI)
 
 1. mkdir aws
