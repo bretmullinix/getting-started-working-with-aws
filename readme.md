@@ -10,7 +10,7 @@ The purpose of this document is to show how to work with AWS.
 
 ### You must have an Amazon AWS Account
 
-##### After you create your account, You must create a new IDM User
+#### After you create your account, You must create a new IDM User
 
 1. Click on **Services** menu
 1. Click on **IAM** link
@@ -36,6 +36,7 @@ environment and cost you money.
 ## Installation
 
 ### Installing Python 3 on Windows
+
 1. Download the executable for Python 3.8.0
 [here](https://www.python.org/ftp/python/3.8.0/python-3.8.0-amd64.exe).
 1. Run the executable.
@@ -45,6 +46,7 @@ environment and cost you money.
 1. If you see a different version, you might have to set the **PATH** variable
 
 #### Installing Python 3 on Fedora
+
 1. Open up a terminal
 4. sudo dnf install python3.8
 1. Type `python3.8 --version`
@@ -52,7 +54,7 @@ environment and cost you money.
 
 ## Instructions
 
-#### Working with the AWS Command Line Interface (CLI)
+### Working with the AWS Command Line Interface (CLI)
 
 1. Open up a terminal
 
@@ -94,25 +96,25 @@ the version of **0.2.1** in the virtual environment.
 
       - Type **aws-shell**.  The **aws-shell** will launch.
       - Type **configure**.  You will be prompted for several values:
-      
+
         - **AWS Access Key ID** = This is the **Access key ID** in your
         **credentials.csv** file. Do not enter any value as this is provided
         by your **AWS_ACCESS_KEY_ID** environment variable.
-        
+
         - **AWS Secret Access Key** = This is the **Secret access key** in your
         **credentials.csv** file.  Do not enter any value as this is provided
         by your **AWS_SECRET_ACCESS_KEY** environment variable.
-        
+
         - **Default region name** = This is the AWS Region the **aws-shell** will
         use by default. A listing of AWS regions are
         [described here](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html).
-        
+
           Here are a couple of examples:
-        
+
           1. **us-east-1** = Located in the US East Region in the state of Ohio.
           1. **us-west-1** = Located in the US West Region in the state of California.
           1. **eu-central-1** = Located in Frankfurt, Germany.
-        
+
         - **Default output format** = This is the output format when running
         commands on the shell.  You do not have to enter a value here.
 
@@ -121,14 +123,16 @@ the version of **0.2.1** in the virtual environment.
 1. Run `ec2 describe-regions`
 
     The output provides all the details of the listed AWS Regions.
-    
+
 1. Run `.exit` to exit the **aws shell**
 1. Run the following by replacing **us-east-1** with the AWS region you want to use:
 
-    `aws ec2 describe-images --region "us-east-1" > images_in_my_region.txt` 
+`aws ec2 describe-images --region "us-east-1" > images_in_my_region.txt`
 1. Open the file **images_in_my_region.txt** and search for an image.
 1. Once you find the image you want to use, copy the **ImageId** to a safe location.
-The **ImageId** can be used in Terraform to launch an AWS instance. The **ImageId** is
+The **ImageId** can be used in Terraform to launch an AWS instance. The **Image
+Id** is
 the same as the **ami**.Take a look at the
-[terraform-for-beginners](https://github.com/bretmullinix/terraform-for-beginners) repo to start working
+[terraform-for-beginners](https://github.com/bretmullinix/terraform-for-beginne
+rs) repo to start working
 with Terraform and use the **ImageId** you found.
