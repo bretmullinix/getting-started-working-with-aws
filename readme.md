@@ -60,7 +60,7 @@ environment and cost you money.
 
 1. export AWS_ACCESS_KEY_ID="<Your **Access Key Id** in your **credentials.csv**>"
 
-1. export AWS_SECRET_ACCESS_KEY="Your **Secret Access Key Id** in your
+1. export AWS_SECRET_ACCESS_KEY="<Your **Secret Access Key Id** in your
 **credentials.csv**>"
 
 1. Navigate to a directory where you plan on putting your
@@ -130,9 +130,7 @@ the version of **0.2.1** in the virtual environment.
 `aws ec2 describe-images --region "us-east-1" > images_in_my_region.txt`
 1. Open the file **images_in_my_region.txt** and search for an image.
 1. Once you find the image you want to use, copy the **ImageId** to a safe location.
-The **ImageId** can be used in Terraform to launch an AWS instance. The **Image
-Id** is
-the same as the **ami**.Take a look at the
+The **ImageId** can be used in Terraform to launch an AWS instance. The **ImageId** is the same as the **ami**.Take a look at the
 [terraform-for-beginners](https://github.com/bretmullinix/terraform-for-beginne
 rs) repo to start working
 with Terraform and use the **ImageId** you found.
